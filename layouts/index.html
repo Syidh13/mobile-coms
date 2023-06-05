@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full bg-white">
+        <div class="px-4 py-3 flex justify-center">
+            <img src="./media/img/lg-primary.svg" alt="" class="h-8 my-auto">
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="pt-16 container px-4 space-y-6 pb-36">
+        <!-- title name -->
+        <section class="py-4 space-y-2 bg-slate-100 p-4 rounded-xl">
+            <div class="flex space-x-1">
+                <h1 class="cs-font-overline py-1 px-2 rounded-full bg-cs-primary text-white">Management</h1>
+                <h1 class="cs-font-overline py-1 px-2 rounded-full bg-white text-cs-primary">FX Sudirman
+                </h1>
+            </div>
+            <h1 class="cs-font-headline2 tracking-tight uppercase text-cs-black">Syidh Al Rasyid</h1>
+            <a href="#">
+                <div class="flex space-x-2 pt-4">
+                    <h1 class="cs-font-caption text-cs-gray my-auto">BM Engginering & Operation</h1>
+                    <i class="fa-regular fa-angle-right my-auto text-xs text-cs-gray"></i>
+                </div>
+            </a>
+        </section>
+        <!-- end title name -->
+
+        <!-- Banner -->
+        <section class="space-y-3">
+            <div class="flex justify-between">
+                <h1 class="cs-font-title my-auto">What's News</h1>
+                <a href="#" class="my-auto">
+                    <h1 class="cs-font-overline px-2 py-1 bg-white border text-cs-gray border-cs-gray rounded-md">See
+                        More</h1>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/2225728/pexels-photo-2225728.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+                        alt="" class=" w-full aspect-video object-cover rounded-xl">
+                </a>
+            </div>
+        </section>
+        <!-- end Banner -->
+
+        <!-- Featured -->
+        <section class="space-y-3">
+            <h1 class="text-cs-black cs-font-title">Featured</h1>
+            <div class="grid grid-cols-2 gap-3">
+                <a href="#">
+                    <div class=" px-3 py-5 rounded-xl  h-full text-center cs-font-body bg-slate-100 space-y-3">
+                        <i class="fa-duotone fa-clipboard-user text-4xl"></i>
+                        <h1 class="text-cs-gray">Complaint & Request</h1>
+                    </div>
+                </a>
+                <a href="./workorder-list.html">
+                    <div class=" px-3 py-5 rounded-xl  text-center h-full cs-font-body bg-slate-100 space-y-3">
+                        <i class="fa-duotone fa-file-lines text-4xl"></i>
+                        <h1 class="text-cs-gray">Work Order</h1>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class=" px-3 py-5 rounded-xl  text-center cs-font-body bg-slate-100 space-y-3">
+                        <i class="fa-duotone fa-clipboard-list-check text-4xl"></i>
+                        <h1 class="text-cs-gray">Schedule Maintance</h1>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class=" px-3 py-5 rounded-xl  text-center cs-font-body bg-slate-100 space-y-3">
+                        <i class="fa-duotone fa-file-invoice text-4xl"></i>
+                        <h1 class="text-cs-gray">Tenant Meter</h1>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Featured -->
+    </section>
+    <!-- ========= end Main ========= -->
+
+    <!-- ========= FAB ========= -->
+    <div x-data="{ open: false }">
+        <button class="fixed bottom-20 right-5 drop-shadow-md" @click="open = true">
+            <i class="fa-solid fa-plus p-4 bg-cs-primary text-cs-black rounded-full"></i>
+        </button>
+        <!-- Modal -->
+        <div class="fixed h-screen w-screen bg-black/50 top-0 z-40" x-show="open" x-transition>
+            <div class="flex justify-center h-screen px-4">
+                <div class="my-auto bg-white relative drop-shadow-md rounded-xl p-4 w-full">
+
+                    <!-- close button -->
+                    <button class="absolute -top-4 right-3" @click="open = !open">
+                        <i class="fa-solid fa-xmark px-2.5 py-0.5 bg-red-500 rounded-full text-lg text-white"></i>
+                    </button>
+                    <!-- close button -->
+
+                    <div class="py-2">
+                        <h1 class="text-center cs-font-title text-cs-black uppercase">Select the type of task</h1>
+                    </div>
+                    <div class="pt-4 space-y-3">
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Complaint & Request</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Work Order</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Loading & UnLoading</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">SIKA (Surat Izin Kerja)</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Tenant Meter</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Request Service</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Modal -->
+    </div>
+    <!-- ========= end FAB ========= -->
+
+    <!-- ========= Footer ========= -->
+    <section class="py-4 fixed bottom-0 w-full bg-white border-t">
+        <div class="grid grid-cols-4">
+            <a href="#" class="text-center text-cs-primary">
+                <i class="fa-regular fa-home p-2 bg-cs-primary text-cs-black  rounded-lg"></i>
+            </a>
+            <a href="#" class="text-center my-auto">
+                <i class="fa-regular fa-message"></i>
+            </a>
+            <a href="#" class="text-center my-auto">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" class="text-center my-auto">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
+        </div>
+    </section>
+    <!-- ========= end Footer ========= -->
+
+</body>
+
+</html>
