@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <div class="flex justify-between">
+            <div class="px-4 py-3">
+                <a href="./workorder-list.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="container pb-10">
+        <img src="https://images.pexels.com/photos/16297410/pexels-photo-16297410/free-photo-of-food-plate-salad-dinner.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="" class="aspect-square w-full object-cover">
+
+        <section class="px-4 pt-3 space-y-4">
+
+            <!-- Title -->
+            <section class="space-y-1">
+                <!--  -->
+                <div class="flex justify-between">
+                    <h1 class="cs-font-caption px-3 py-1 rounded-full bg-cs-primary text-cs-black">Utility</h1>
+                    <h1 class="cs-font-caption my-auto text-cs-gray">11 May 2023, 09:00 AM</h1>
+                </div>
+                <!-- title -->
+                <div>
+                    <h1 class="cs-font-headline2 tracking-tight text-cs-black">SPV Electric</h1>
+                </div>
+                <!-- end title -->
+            </section>
+            <!-- end Title -->
+
+            <!-- test -->
+            <section class="grid grid-cols-5 gap-3">
+                <!-- due date -->
+                <section class="border p-4 col-span-3 rounded-xl">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <i class="fa-regular fa-calendar text-xs my-auto text-cs-gray"></i>
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Due Date</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">12 May 2023</h1>
+                            <span class="my-auto text-cs-gray cs-font-body">|</span>
+                            <h1 class="cs-font-body my-auto">14:30 PM</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end due date -->
+                <!-- Assigness -->
+                <section x-data="{ open: false }" class="col-span-2">
+                    <div class="p-4 border rounded-xl space-y-2 cursor-pointer" @click="open = true">
+                        <div class="flex space-x-1">
+                            <i class="fa-regular fa-user text-cs-gray text-xs my-auto"></i>
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Assigned </h1>
+                        </div>
+                        <div class="flex justify-between">
+                            <h1 class="cs-font-body my-auto">999 Staff</h1>
+                            <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div x-show="open" x-transition class="bg-black/40 h-screen fixed w-screen top-0 left-0 z-50">
+                        <div class="flex justify-center h-screen p-4">
+                            <div class="my-auto w-full">
+                                <div class="bg-white rounded-xl p-4">
+                                    <!-- header -->
+                                    <div class="flex justify-between border-b pb-4">
+                                        <h1 class="cs-font-title my-auto">Staff Assigned <span
+                                                class="cs-font-caption text-cs-gray">(2
+                                                Staff)</span></h1>
+                                        <i class="fa-regular fa-xmark my-auto px-2 cursor-pointer rounded-full py-1.5 bg-slate-100"
+                                            @click="open = !open"></i>
+                                    </div>
+                                    <!-- end header -->
+                                    <div class=" overflow-y-auto max-h-96">
+                                        <ul class="cs-font-body py-3 divide-y">
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end modal -->
+                </section>
+                <!-- end Assigness -->
+
+                </div>
+            </section>
+            <!-- test -->
+
+            <!-- Progress Status -->
+            <section x-data="{ open: false }">
+                <div @click="open = true" class="cursor-pointer border rounded-xl p-4">
+                    <div class="space-y-1">
+                        <h1 class="cs-font-caption text-cs-gray">Progress Meter</h1>
+                        <div class="flex justify-between">
+                            <h1 class="cs-font-subtitle text-cs-primary my-auto">Inspect</h1>
+                            <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal -->
+                <div x-show="open" class="bg-black/40 h-screen fixed w-screen top-0 left-0 z-50">
+                    <div class="flex justify-center h-screen p-4">
+                        <div class="my-auto w-full">
+                            <div class="bg-white rounded-xl p-4">
+                                <h1 class="cs-font-title">Assignees</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+            </section>
+            <!-- end Progress Status -->
+
+            <!-- Category -->
+            <section class="bg-slate-50 rounded-xl p-4 space-y-4">
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Category</h1>
+                    <h1 class="font-body text-sm">Plumbing - Air Bersih</h1>
+                </div>
+            </section>
+            <!-- end Category -->
+
+            <!-- Detail -->
+            <section class="bg-slate-50 rounded-xl p-4 space-y-4">
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Ticket ID</h1>
+                    <h1 class="font-title text-sm">PSKL/WO/V/2023/2028</h1>
+                </div>
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Title</h1>
+                    <h1 class="font-title text-sm">SPV Electric</h1>
+                </div>
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Description</h1>
+                    <h1 class="font-body text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        posuere, elit vitae commodo venenatis, orci sem elementum elit, non pellentesque elit arcu eu
+                        massa. Phasellus magna diam, pulvinar id sem pulvinar, tincidunt condimentum elit.</h1>
+                </div>
+            </section>
+            <!-- end Detail -->
+
+            <!-- Location -->
+            <section class="bg-slate-50 rounded-xl p-4 space-y-4">
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Location</h1>
+                    <h1 class="font-body text-sm">Floor BF - Depan Kamar</h1>
+                </div>
+            </section>
+            <!-- end Location -->
+
+        </section>
+
+
+
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+
+
+</body>
+
+</html>
