@@ -125,8 +125,6 @@
                                     <!-- modal -->
                                     <div x-show="open"
                                         class="fixed top-0 left-0 z-40 h-screen w-screen backdrop-blur-md" x-transition>
-
-
                                         <div class="flex justify-center h-screen p-2">
                                             <div class="my-auto space-y-4">
                                                 <div class="bg-white shadow-md p-1 rounded-lg">
@@ -139,9 +137,6 @@
                                                 </button>
                                             </div>
                                         </div>
-
-
-
                                     </div>
                                     <!-- end modal -->
                                 </div>
@@ -174,10 +169,57 @@
                             </div>
                             <!-- gallery -->
                             <div class="flex gap-2">
-                                <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    alt="" class=" aspect-square w-full object-cover rounded-xl">
-                                <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    alt="" class=" aspect-square w-full object-cover rounded-xl">
+                                <!-- img 1 -->
+                                <div x-data="{ open: false }">
+                                    <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        alt=""
+                                        class=" aspect-square w-full object-cover rounded-xl cursor-pointer hover:drop-shadow-md transition-all"
+                                        button @click="open = true">
+                                    <!-- modal -->
+                                    <div x-show="open"
+                                        class="fixed top-0 left-0 z-40 h-screen w-screen backdrop-blur-md" x-transition>
+                                        <div class="flex justify-center h-screen p-2">
+                                            <div class="my-auto space-y-4">
+                                                <div class="bg-white shadow-md p-1 rounded-lg">
+                                                    <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                        alt="" class="w-full aspect-square object-cover rounded-md">
+                                                </div>
+                                                <button class="w-full" button @click="open = !open">
+                                                    <i
+                                                        class="fa-regular fa-xmark px-3.5 rounded-full py-3 bg-red-500 text-white"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end modal -->
+                                </div>
+                                <!-- end img 1 -->
+
+                                <!-- img 2 -->
+                                <div x-data="{ open: false }">
+                                    <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                        alt=""
+                                        class=" aspect-square w-full object-cover rounded-xl cursor-pointer hover:drop-shadow-md transition-all"
+                                        button @click="open = true">
+                                    <!-- modal -->
+                                    <div x-show="open"
+                                        class="fixed top-0 left-0 z-40 h-screen w-screen backdrop-blur-md" x-transition>
+                                        <div class="flex justify-center h-screen p-2">
+                                            <div class="my-auto space-y-4">
+                                                <div class="bg-white shadow-md p-1 rounded-lg">
+                                                    <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                        alt="" class="w-full aspect-square object-cover rounded-md">
+                                                </div>
+                                                <button class="w-full" button @click="open = !open">
+                                                    <i
+                                                        class="fa-regular fa-xmark px-3.5 rounded-full py-3 bg-red-500 text-white"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end modal -->
+                                </div>
+                                <!-- end img 2 -->
                             </div>
                             <!-- description -->
                             <h1 class="cs-font-body p-3 rounded-xl bg-slate-50 text-cs-gray">Lorem ipsum dolor sit
@@ -212,6 +254,7 @@
                                     alt="" class=" aspect-square w-full object-cover rounded-xl">
                                 <img src="https://images.pexels.com/photos/12993530/pexels-photo-12993530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                                     alt="" class=" aspect-square w-full object-cover rounded-xl">
+
                             </div>
                             <!-- description -->
                             <h1 class="cs-font-body p-3 rounded-xl bg-slate-50 text-cs-gray">Lorem ipsum dolor sit
