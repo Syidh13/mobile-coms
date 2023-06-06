@@ -126,27 +126,18 @@
             <!-- test -->
 
             <!-- Progress Status -->
-            <section x-data="{ open: false }">
-                <div @click="open = true" class="cursor-pointer border rounded-xl p-4">
-                    <div class="space-y-1">
-                        <h1 class="cs-font-caption text-cs-gray">Progress Meter</h1>
-                        <div class="flex justify-between">
-                            <h1 class="cs-font-subtitle text-cs-primary my-auto">Inspect</h1>
-                            <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- modal -->
-                <div x-show="open" class="bg-black/40 h-screen fixed w-screen top-0 left-0 z-50">
-                    <div class="flex justify-center h-screen p-4">
-                        <div class="my-auto w-full">
-                            <div class="bg-white rounded-xl p-4">
-                                <h1 class="cs-font-title">Assignees</h1>
+            <section>
+                <a href="./workorder-list-progressMeter.html">
+                    <div class="cursor-pointer border rounded-xl p-4">
+                        <div class="space-y-1">
+                            <h1 class="cs-font-caption text-cs-gray">Progress Meter</h1>
+                            <div class="flex justify-between">
+                                <h1 class="cs-font-subtitle text-cs-primary my-auto">Inspect</h1>
+                                <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
                             </div>
                         </div>
-                    </div>
+                </a>
                 </div>
-                <!-- end modal -->
             </section>
             <!-- end Progress Status -->
 
