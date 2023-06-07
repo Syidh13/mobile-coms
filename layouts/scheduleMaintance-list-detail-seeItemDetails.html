@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <div class="flex justify-between">
+            <div class="px-4 py-3">
+                <a href="./scheduleMaintance-list-detail.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="container pb-10">
+        <img src="./media/img/img-no-image.png" alt="" class="aspect-square w-full object-cover">
+
+        <section class="px-4 pt-3 space-y-4">
+
+            <!-- Title -->
+            <section class="space-y-1">
+                <!--  -->
+                <h1 class="cs-font-caption my-auto text-cs-gray">Asset Detail</h1>
+                <!-- title -->
+                <div>
+                    <h1 class="cs-font-headline2 tracking-tight text-cs-black">Plumbing - Air Bersih Plumbing </h1>
+                </div>
+                <!-- end title -->
+            </section>
+            <!-- end Title -->
+
+            <!--  -->
+            <section class="grid grid-cols-2 gap-3">
+                <!-- Asset Code -->
+                <section class="border p-4 col-span-1 rounded-xl ">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Asset Code</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">12345 - 445</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end Asset Code -->
+                <!-- Asset Category -->
+                <section class="border p-4 col-span-1 rounded-xl ">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Asset Category</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">-</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end Asset Category -->
+                <!-- Floor -->
+                <section class="border p-4 col-span-1 rounded-xl ">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Floor</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">Lantai 1</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end Floor -->
+                <!-- Location -->
+                <section class="border p-4 col-span-1 rounded-xl ">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Location</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">1-2B</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end Location -->
+
+            </section>
+
+
+            <!-- Category -->
+            <section class="bg-slate-50 rounded-xl p-2 space-y-4" x-data="{ open: false }">
+                <div class="bg-white rounded-lg px-2 py-3 space-y-3">
+                    <div class="flex justify-between" @click="open = !open">
+                        <h1 class="cs-font-buttonHover uppercase my-auto">Specificaton</h1>
+                        <button my-auto>
+                            <i class="fa-regular fa-angle-down my-auto px-2 py-1.5 rounded-full bg-slate-100"></i>
+                        </button>
+                    </div>
+                    <!-- modal -->
+                    <div class="border p-2 divide-y" x-show="open">
+                        <!-- Condition -->
+                        <div class="space-y-1 py-2">
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-overline text-cs-gray my-auto">Condition</h1>
+                            </div>
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-body my-auto">NA</h1>
+                            </div>
+                        </div>
+                        <!-- end Condition -->
+                        <!-- Brand -->
+                        <div class="space-y-1 py-2">
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-overline text-cs-gray my-auto">Brand</h1>
+                            </div>
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-body my-auto">Mitsubishi</h1>
+                            </div>
+                        </div>
+                        <!-- end Brand -->
+                        <!-- Quantity -->
+                        <div class="space-y-1 py-2">
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-overline text-cs-gray my-auto">Quantity</h1>
+                            </div>
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-body my-auto">2</h1>
+                            </div>
+                        </div>
+                        <!-- end Quantity -->
+                        <!-- Type -->
+                        <div class="space-y-1 py-2">
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-overline text-cs-gray my-auto">Type</h1>
+                            </div>
+                            <div class="flex space-x-1">
+                                <h1 class="cs-font-body my-auto">Engine</h1>
+                            </div>
+                        </div>
+                        <!-- end Type -->
+                    </div>
+                    <!-- end modal -->
+                </div>
+            </section>
+            <!-- end Category -->
+
+        </section>
+
+
+
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+
+
+</body>
+
+</html>
