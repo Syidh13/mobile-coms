@@ -35,26 +35,48 @@
         <!-- ========= end Title & Name ========= -->
         <!-- ========= Title & Name ========= -->
         <section class="space-y-2">
+            <!-- Profile -->
             <div>
-                <a href="#">
+                <a href="./others-profile.html">
                     <div class="border p-4 rounded-lg">
                         <h1 class="cs-font-buttonHover">Profile</h1>
                     </div>
                 </a>
             </div>
+            <!-- Change Password -->
             <div>
-                <a href="#">
+                <a href="./others-changePassword.html">
                     <div class="border p-4 rounded-lg">
                         <h1 class="cs-font-buttonHover">Change Password</h1>
                     </div>
                 </a>
             </div>
-            <div>
-                <a href="#">
+            <!-- Log Out -->
+            <div x-data="{ open: false }">
+                <div @click="open = true" class="cursor-pointer">
                     <div class="border p-4 rounded-lg">
                         <h1 class="cs-font-buttonHover text-red-500">Log Out</h1>
                     </div>
-                </a>
+                </div>
+                <!-- modal -->
+                <div class="fixed h-screen w-screen top-0 left-0 z-20 backdrop-blur-sm" x-show="open" x-transition>
+                    <div class="flex justify-center h-screen">
+                        <div class="bg-white p-4 my-auto drop-shadow-md rounded-xl w-72 space-y-4">
+                            <div class="space-y-1">
+                                <h1 class="cs-font-title text-center">Log Out</h1>
+                                <h1 class="cs-font-body text-center text-cs-gray">Are you sure want to log out?</h1>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="cs-font-buttonNormal text-center my-auto text-cs-gray">YES</div>
+                                <div @click="open = !open"
+                                    class="cs-font-buttonNormal cursor-pointer text-center p-3 rounded-lg bg-cs-primary text-cs-black">
+                                    NO</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end modal -->
             </div>
         </section>
         <!-- ========= end Title & Name ========= -->
