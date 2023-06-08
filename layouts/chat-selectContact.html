@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+
+        <div class="flex justify-between px-4 py-3">
+            <div>
+                <a href="./chat.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+            <!-- search -->
+            <div class="flex justify-end" div x-data="{ open: false }">
+                <div @click="open = true" class="cursor-pointer">
+                    <i
+                        class="fa-regular fa-magnifying-glass text-cs-black px-2.5 rounded-full bg-white drop-shadow-md py-2"></i>
+                </div>
+                <!-- modal -->
+                <div class="fixed top-3 px-4 w-full left-0" x-show="open" x-transition>
+                    <div class="border rounded-xl py-1 px-3 bg-white grid grid-cols-10 drop-shadow-md">
+                        <input type="search" name="" id="" placeholder="search by name"
+                            class="w-full cs-font-body focus:outline-none col-span-7">
+                        <div class="my-auto col-span-1">
+                            <i class="fa-regular fa-xmark py-2 px-2.5 bg-slate-50 rounded-full"></i>
+                        </div>
+                        <div class="my-auto col-span-2 justify-end flex cursor-pointer border-l" @click="open = !open">
+                            <h1 class="font-title text-cs-black text-xs">Cancel</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+            </div>
+            <!-- end search -->
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="pt-16 container px-4 space-y-6 pb-12">
+        <!-- title -->
+        <div>
+            <h1 class="cs-font-headline2 tracking-tight text-cs-black">Select Contact</h1>
+        </div>
+        <!-- end title -->
+
+        <!-- no message -->
+        <section class="w-full">
+            <!-- title -->
+            <h1 class="cs-font-caption text-cs-gray">Contact</h1>
+            <!-- contact list -->
+            <section class="py-4 space-y-2">
+                <!-- contact 1 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 1 -->
+
+                <!-- contact 2 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 2 -->
+
+                <!-- contact 3 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 3 -->
+
+                <!-- contact 4 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 4 -->
+
+                <!-- contact 5 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 5 -->
+
+                <!-- contact 6 -->
+                <div>
+                    <a href="./chat-selectContact-chatInput.html">
+                        <div class="border px-4 py-2 rounded-xl">
+                            <h1 class="line-clamp-1 cs-font-title text-cs-black">Sarah Baradi</h1>
+                            <h1 class="line-clamp-1 cs-font-caption text-cs-gray">Electric Manager</h1>
+                        </div>
+                    </a>
+                </div>
+                <!-- end contact 6 -->
+
+
+            </section>
+        </section>
+        <!-- end no message -->
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <!-- search -->
+        <div class="flex justify-end" div x-data="{ open: false }">
+            <div class="px-4 py-3">
+                <div @click="open = true" class="cursor-pointer">
+                    <i
+                        class="fa-regular fa-magnifying-glass text-cs-black px-2.5 rounded-full bg-white drop-shadow-md py-2"></i>
+                </div>
+                <!-- modal -->
+                <div class="fixed top-3 px-4 w-full left-0" x-show="open" x-transition>
+                    <div class="border rounded-xl py-1 px-3 bg-white grid grid-cols-10 drop-shadow-md">
+                        <input type="search" name="" id="" placeholder="search by name"
+                            class="w-full cs-font-body focus:outline-none col-span-7">
+                        <div class="my-auto col-span-1">
+                            <i class="fa-regular fa-xmark py-2 px-2.5 bg-slate-50 rounded-full"></i>
+                        </div>
+                        <div class="my-auto col-span-2 justify-end flex cursor-pointer border-l" @click="open = !open">
+                            <h1 class="font-title text-cs-black text-xs">Cancel</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+            </div>
+        </div>
+        <!-- end search -->
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="pt-16 container px-4 space-y-6 pb-36">
+        <!-- title -->
+        <div>
+            <h1 class="cs-font-headline2 tracking-tight text-cs-black">Message</h1>
+        </div>
+        <!-- end title -->
+
+        <!-- no message -->
+        <section class="w-full flex justify-center py-20">
+            <!-- image icon -->
+            <div class="text-center space-y-4">
+                <i class="fa-duotone fa-messages text-4xl fa-beat"
+                    style="--fa-animation-duration: 2s; --fa-beat-scale: 1.1;"></i>
+                <div class="space-y-1">
+                    <h1 class="cs-font-title text-cs-black">No Message Found</h1>
+                    <h1 class="cs-font-body text-cs-gray">It seems, no message in your chat.</h1>
+                    <h1 class="cs-font-body text-cs-gray">"Let's star chat now"</h1>
+                </div>
+            </div>
+        </section>
+        <!-- end no message -->
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+    <!-- ========= FAB ========= -->
+    <div>
+        <a href="./chat-selectContact.html">
+            <button class="fixed bottom-20 right-5 drop-shadow-md" @click="open = true">
+                <i class="fa-regular fa-message-plus p-4 bg-cs-primary text-cs-black rounded-full"></i>
+            </button>
+        </a>
+    </div>
+    <!-- ========= end FAB ========= -->
+
+    <!-- ========= Footer ========= -->
+    <section class="py-4 fixed bottom-0 w-full bg-white border-t">
+        <div class="grid grid-cols-4">
+            <a href="./index.html" class="text-center my-auto">
+                <i class="fa-regular fa-home"></i>
+            </a>
+            <a href="./chat.html" class="text-center my-auto">
+                <i class="fa-regular fa-message py-2 px-3 bg-cs-primary text-cs-black  rounded-lg"></i>
+            </a>
+            <a href="#" class="text-center my-auto">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="./others.html" class="text-center my-auto">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
+        </div>
+    </section>
+    <!-- ========= end Footer ========= -->
+</body>
+
+</html>
