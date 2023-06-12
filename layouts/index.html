@@ -15,7 +15,7 @@
 <body>
 
     <!-- ========= Header ========= -->
-    <section class="fixed w-full bg-white">
+    <section class="fixed w-full bg-white z-10">
         <div class="px-4 py-3 flex justify-center">
             <img src="./media/img/lg-primary.svg" alt="" class="h-8 my-auto">
         </div>
@@ -23,73 +23,430 @@
     <!-- ========= end Header ========= -->
 
     <!-- ========= Main ========= -->
-    <section class="pt-16 container px-4 space-y-6 pb-36">
+    <section class="pt-16 container space-y-8 pb-36">
         <!-- title name -->
-        <section class="py-4 space-y-2 bg-slate-100 p-4 rounded-xl">
-            <div class="flex space-x-1">
-                <h1 class="cs-font-overline py-1 px-2 rounded-full bg-cs-primary text-white">Management</h1>
-                <h1 class="cs-font-overline py-1 px-2 rounded-full bg-white text-cs-primary">FX Sudirman
-                </h1>
-            </div>
-            <h1 class="cs-font-headline2 tracking-tight uppercase text-cs-black">Syidh Al Rasyid</h1>
-            <a href="./tenantDetail.html">
-                <div class="flex space-x-2 pt-4">
-                    <h1 class="cs-font-caption text-cs-gray my-auto">BM Engginering & Operation</h1>
-                    <i class="fa-regular fa-angle-right my-auto text-xs text-cs-gray"></i>
+        <section class="px-4">
+            <div class="space-y-2 bg-slate-100 p-4 rounded-xl">
+                <div class="flex space-x-1">
+                    <h1 class="cs-font-overline py-1 px-2 rounded-full bg-cs-primary text-white">Management</h1>
+                    <h1 class="cs-font-overline py-1 px-2 rounded-full bg-white text-cs-primary">FX Sudirman
+                    </h1>
                 </div>
-            </a>
+                <h1 class="cs-font-headline2 tracking-tight uppercase text-cs-black">Syidh Al Rasyid</h1>
+                <a href="./tenantDetail.html">
+                    <div class="flex space-x-2 pt-4">
+                        <h1 class="cs-font-caption text-cs-gray my-auto">BM Engginering & Operation</h1>
+                        <i class="fa-regular fa-angle-right my-auto text-xs text-cs-gray"></i>
+                    </div>
+                </a>
+            </div>
         </section>
         <!-- end title name -->
 
         <!-- Banner -->
-        <section class="space-y-3">
-            <div class="flex justify-between">
+        <section class="space-y-3 ">
+            <div class="flex justify-between px-4">
                 <h1 class="cs-font-title my-auto">What's News</h1>
+                <a href="./news-list.html" class="my-auto">
+                    <h1 class="cs-font-overline px-2 py-1 bg-white border text-cs-gray border-cs-gray rounded-md">See
+                        More</h1>
+                </a>
+            </div>
+
+            <div class="overflow-x-auto flex gap-3">
+                <div class="flex-none first:pl-4 last:mr-4 relative">
+                    <a href="./news-list-detail.html">
+                        <img src="https://images.pexels.com/photos/2920064/pexels-photo-2920064.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                            alt="" class="w-64 aspect-video object-cover rounded-xl">
+                    </a>
+                    <div class="absolute text-white bottom-0  px-2 pt-4 pb-2 rounded-b-lg backdrop-blur-sm">
+                        <h1 class="cs-font-body">Briefing Security - Regulasi Covid Terbaru</h1>
+                    </div>
+                </div>
+
+                <div class="flex-none first:pl-4 last:mr-4 relative">
+                    <a href="./news-list-detail.html">
+                        <img src="https://images.pexels.com/photos/2225728/pexels-photo-2225728.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+                            alt="" class="w-64 aspect-video object-cover rounded-xl">
+                    </a>
+                    <div class="absolute text-white bottom-0  px-2 pt-4 pb-2 rounded-b-lg backdrop-blur-sm">
+                        <h1 class="cs-font-body">Briefing Security - Regulasi Covid Terbaru</h1>
+                    </div>
+                </div>
+
+                <div class="flex-none first:pl-4 last:mr-4 relative">
+                    <a href="./news-list-detail.html">
+                        <img src="https://images.pexels.com/photos/2225728/pexels-photo-2225728.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+                            alt="" class="w-64 aspect-video object-cover rounded-xl">
+                    </a>
+                    <div class="absolute text-white bottom-0  px-2 pt-4 pb-2 rounded-b-lg backdrop-blur-sm">
+                        <h1 class="cs-font-body">Briefing Security - Regulasi Covid Terbaru</h1>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- end Banner -->
+
+        <!-- featured -->
+        <div class="space-y-2">
+            <h1 class="text-cs-black cs-font-title px-4">Featured</h1>
+            <div class="gap-3 overflow-x-auto flex pb-4">
+                <!-- Complaint & Request -->
+                <div class="flex-none first:pl-4 last:pr-4">
+                    <a href="#">
+                        <div class="bg-white drop-shadow-lg w-36 relative aspect-square rounded-xl h-full">
+                            <div class="p-4">
+                                <!-- icon -->
+                                <i class="fa-duotone fa-clipboard-user text-cs-primary text-4xl"></i>
+                                <!-- title -->
+                                <h1 class="cs-font-body text-cs-black absolute bottom-4">Complaint & Request</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end Complaint & Request -->
+
+                <!-- Work Order -->
+                <div class="flex-none first:pl-4 last:pr-4">
+                    <a href="./workorder-list.html">
+                        <div class="bg-white drop-shadow-lg w-36 relative aspect-square rounded-xl h-full">
+                            <div class="p-4">
+                                <!-- icon -->
+                                <i class="fa-duotone fa-file-lines text-cs-primary text-4xl"></i>
+                                <!-- title -->
+                                <h1 class="cs-font-body text-cs-black absolute bottom-4">Work Order</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end Work Order -->
+
+
+                <!-- Schedule Maintance -->
+                <div class="flex-none first:pl-4 last:pr-4">
+                    <a href="./scheduleMaintance-list.html">
+                        <div class="bg-white drop-shadow-lg w-36 relative aspect-square rounded-xl h-full">
+                            <div class="p-4">
+                                <!-- icon -->
+                                <i class="fa-duotone fa-clipboard-list-check text-cs-primary text-4xl"></i>
+                                <!-- title -->
+                                <h1 class="cs-font-body text-cs-black absolute bottom-4">Schedule Maintance</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end Schedule Maintance -->
+
+                <!-- Tenant Meter -->
+                <div class="flex-none first:pl-4 last:pr-4">
+                    <a href="#">
+                        <div class="bg-white drop-shadow-lg w-36 relative aspect-square rounded-xl h-full">
+                            <div class="p-4">
+                                <!-- icon -->
+                                <i class="fa-duotone fa-file-invoice text-cs-primary text-4xl"></i>
+                                <!-- title -->
+                                <h1 class="cs-font-body text-cs-black absolute bottom-4">Tenant Meter</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end Tenant Meter -->
+            </div>
+        </div>
+        <!-- featured -->
+
+
+        <!-- Work Order -->
+        <section class="space-y-3 px-4">
+            <div class="flex justify-between">
+                <h1 class="text-cs-black cs-font-title my-auto">Work Order</h1>
                 <a href="#" class="my-auto">
                     <h1 class="cs-font-overline px-2 py-1 bg-white border text-cs-gray border-cs-gray rounded-md">See
                         More</h1>
                 </a>
             </div>
-            <div>
-                <a href="#">
-                    <img src="https://images.pexels.com/photos/2225728/pexels-photo-2225728.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-                        alt="" class=" w-full aspect-video object-cover rounded-xl">
-                </a>
-            </div>
-        </section>
-        <!-- end Banner -->
 
-        <!-- Featured -->
-        <section class="space-y-3">
-            <h1 class="text-cs-black cs-font-title">Featured</h1>
-            <div class="grid grid-cols-2 gap-3">
-                <a href="#">
-                    <div class=" px-3 py-5 rounded-xl  h-full text-center cs-font-body bg-slate-100 space-y-3">
-                        <i class="fa-duotone fa-clipboard-user text-4xl"></i>
-                        <h1 class="text-cs-gray">Complaint & Request</h1>
-                    </div>
-                </a>
-                <a href="./workorder-list.html">
-                    <div class=" px-3 py-5 rounded-xl  text-center h-full cs-font-body bg-slate-100 space-y-3">
-                        <i class="fa-duotone fa-file-lines text-4xl"></i>
-                        <h1 class="text-cs-gray">Work Order</h1>
-                    </div>
-                </a>
-                <a href="./scheduleMaintance-list.html">
-                    <div class=" px-3 py-5 rounded-xl  text-center cs-font-body bg-slate-100 space-y-3">
-                        <i class="fa-duotone fa-clipboard-list-check text-4xl"></i>
-                        <h1 class="text-cs-gray">Schedule Maintance</h1>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class=" px-3 py-5 rounded-xl  text-center cs-font-body bg-slate-100 space-y-3">
-                        <i class="fa-duotone fa-file-invoice text-4xl"></i>
-                        <h1 class="text-cs-gray">Tenant Meter</h1>
-                    </div>
+            <!-- test card -->
+            <div x-data="{ open: false }">
+                <div class="flex justify-between border-t border-l border-r p-4">
+                    <h1>test</h1>
+                    <h1 class="cursor-pointer" @click="open = !open">click here</h1>
+                </div>
+                <!-- modal -->
+                <div class="">
+                    <div class="border-r border-l bg-slate-100 py-4" x-show="open">sub menu</div>
+                </div>
+                <!-- border -->
+                <div class="text-center border-l border-r border-b p-4">
+                    <h1>View detail</h1>
+                </div>
+            </div>
+            <!-- end test card -->
+
+            <!-- Card -->
+            <section class="space-y-3">
+
+                <!-- card 1 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 1 -->
+
+                <!-- card 2 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 2 -->
+
+                <!-- card 3 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 3 -->
+
+
+
+            </section>
+            <!-- end Card -->
+        </section>
+        <!-- Work Order -->
+
+        <!-- Schedule Maintance -->
+        <section class="space-y-3 px-4">
+            <div class="flex justify-between">
+                <h1 class="text-cs-black cs-font-title my-auto">Schedule Maintance</h1>
+                <a href="#" class="my-auto">
+                    <h1 class="cs-font-overline px-2 py-1 bg-white border text-cs-gray border-cs-gray rounded-md">See
+                        More</h1>
                 </a>
             </div>
+
+            <!-- Card -->
+            <section class="space-y-3">
+
+                <!-- card 1 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 1 -->
+
+                <!-- card 2 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 2 -->
+
+                <!-- card 3 -->
+                <div class="relative">
+                    <a href="./workorder-list-detail.html">
+                        <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
+
+                            <div class="grid grid-cols-6">
+                                <!-- Tag -->
+                                <div class="flex justify-between gap-3  col-span-5">
+                                    <div class="flex space-x-2  mr-8">
+                                        <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
+                                            <h1 class="cs-font-caption">Inspect</h1>
+                                        </div>
+                                        <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
+                                            <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Tag -->
+                                <!-- time -->
+                                <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
+                                    <h1>09:12 PM</h1>
+                                </div>
+                                <!-- end time -->
+                            </div>
+
+                            <!-- title -->
+                            <div class="col-span-4 space-y-2">
+                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric
+                                </h1>
+                            </div>
+                            <!-- end title -->
+
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- end card 3 -->
+
+
+
+            </section>
+            <!-- end Card -->
         </section>
-        <!-- Featured -->
+        <!-- Schedule Maintance -->
     </section>
     <!-- ========= end Main ========= -->
 
@@ -99,7 +456,7 @@
             <i class="fa-solid fa-plus p-4 bg-cs-primary text-cs-black rounded-full"></i>
         </button>
         <!-- Modal -->
-        <div class="fixed h-screen w-screen bg-black/50 top-0 z-40" x-show="open" x-transition>
+        <div class="fixed h-screen w-screen backdrop-blur-sm top-0 z-40" x-show="open" x-transition>
             <div class="flex justify-center h-screen px-4">
                 <div class="my-auto bg-white relative drop-shadow-md rounded-xl p-4 w-full">
 
