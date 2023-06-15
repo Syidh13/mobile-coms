@@ -47,7 +47,11 @@
             <div class="relative">
                 <a href="./scheduleMaintance-list-detail.html">
                     <div class="bg-red-50 w-full relative border border-red-500 p-4 rounded-xl space-y-3">
-                        <h1 class="font-caption text-[10px] text-cs-gray">FXS/PM/VI/2023/0001</h1>
+                        <div class="flex justify-between">
+                            <h1 class="font-caption text-[10px] text-cs-gray my-auto">FXS/PM/VI/2023/0001</h1>
+                            <h1 class="font-caption text-[10px] text-cs-gray bg-white border rounded-md py-1 px-3">See
+                                detail</h1>
+                        </div>
                         <!-- tag -->
                         <div class="flex space-x-2">
                             <!-- priority -->
@@ -61,7 +65,7 @@
                             </div>
                             <!-- out of date -->
                             <div class="cs-font-overline flex px-3 space-x-1 py-1 bg-pink-500 rounded-md text-white">
-                                <h1 class="my-auto">Out of date</h1>
+                                <h1 class="my-auto">Overdue</h1>
                             </div>
                         </div>
                         <!-- end tag -->
@@ -73,15 +77,15 @@
                         </div>
                         <!-- end Title -->
 
-                        <div class="grid grid-cols-2 gap-3">
+                        <div class="grid grid-cols-2 gap-2">
+                            <!-- asset -->
                             <div class="bg-white px-2 py-3 rounded-lg space-y-1">
                                 <h1 class="cs-font-caption text-cs-gray">Asset / Code</h1>
                                 <h1 class="cs-font-body text-cs-black">Genset / 12345</h1>
                             </div>
-                            <div class="bg-red-500 px-2 py-3 rounded-lg space-y-1">
-                                <h1 class="cs-font-caption text-white">Due Date</h1>
-                                <h1 class="cs-font-body text-white">5 Jun 2023</h1>
-                            </div>
+                            <!-- end asset -->
+
+                            <!-- assign to -->
                             <div class="bg-white px-2 py-3 rounded-lg space-y-1">
                                 <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
                                 <div class="flex">
@@ -99,12 +103,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex cursor-pointer justify-center">
-                                <h1
-                                    class="my-auto text-center cs-font-buttonHover rounded-full px-4 text-white py-2 bg-yellow-500">
-                                    See
-                                    Detail</h1>
+                            <!-- end assign to -->
+
+                            <!-- due date -->
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Due Date</h1>
+                                <h1 class="cs-font-body text-cs-black">5 Jun 2023</h1>
                             </div>
+                            <!-- end due date -->
+
+                            <!-- due date -->
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Start time</h1>
+                                <h1 class="cs-font-body text-cs-black">10:00 AM</h1>
+                            </div>
+                            <!-- end due date -->
+
+
+
+
                         </div>
                     </div>
                 </a>

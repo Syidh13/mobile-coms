@@ -41,319 +41,182 @@
         <!-- end title -->
 
         <!-- Card -->
-        <section class="space-y-3">
+        <section class="space-y-6">
 
-            <!-- card 1 -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="./workorder-list-detail.html" class="">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
-                                </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
+            <!-- Card 1 -->
+            <div class="relative" x-data="{ open: false }">
+                <a href="./workorder-list-detail.html">
+                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-3">
+
+                        <div class="flex justify-between">
+                            <!-- tag -->
+                            <div class="flex gap-2 flex-wrap">
+                                <!-- complete -->
+                                <div
+                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-purple-500 rounded-md text-white">
+                                    <h1 class="my-auto">Inspect</h1>
                                 </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                <!-- out of date -->
+                                <div
+                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-white rounded-md text-cs-black border">
+                                    <h1 class="my-auto">Lift & Eskalator</h1>
                                 </div>
                             </div>
+                            <!-- end tag -->
+                            <div class="my-auto">
+                                <h1 class="cs-font-caption text-cs-gray">17 Jun 2023</h1>
+                            </div>
                         </div>
+
+                        <!-- Title -->
+                        <div>
+                            <h1 class="cs-font-title text-cs-black">SPV Electric</h1>
+                        </div>
+                        <!-- end Title -->
                     </div>
                 </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
+                <!-- absolute -->
+                <div class="absolute w-full top-20">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-caret-down cursor-pointer px-2 py-1 bg-white text-xs rounded-full shadow"
+                            @click="open = !open"></i>
+                    </div>
                 </div>
-                <!--  -->
                 <!-- modal -->
-                <div class="px-2 relative" x-show="open" x-transition>
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
+                <div class="px-4" x-show="open" x-transition>
+                    <div class="border rounded-b-xl bg-slate-50 border-t-0 p-4 space-y-2">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Due Date</h1>
+                                <h1 class="cs-font-body text-cs-black">5 Jun 2023</h1>
+                            </div>
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
+                                <div class="flex">
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">w</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">+90</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white col-span-2 px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Description</h1>
+                                <h1 class="cs-font-body text-cs-black line-clamp-3">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit. Sed sed dolor sit amet eros gravida aliquam. Vivamus sed varius
+                                    sapien, ac sagittis orci. In placerat justo ut tempus ornare.</h1>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="./workorder-list-detail.html">
+                                <h1
+                                    class="cs-font-buttonNormal py-2 px-4 border rounded-xl border-cs-primary text-cs-primary">
+                                    View Detail
+                                </h1>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- end modal -->
-
             </div>
-            <!-- end card 1 -->
+            <!-- end Card 1 -->
 
-            <!-- card example -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="www.google.com" class="" target="_blank">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
-                                </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
+            <!-- Card 1 -->
+            <div class="relative" x-data="{ open: false }">
+                <a href="./workorder-list-detail.html">
+                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-3">
+
+                        <div class="flex justify-between">
+                            <!-- tag -->
+                            <div class="flex gap-2 flex-wrap">
+                                <!-- complete -->
+                                <div
+                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-purple-500 rounded-md text-white">
+                                    <h1 class="my-auto">Inspect</h1>
                                 </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
+                                <!-- out of date -->
+                                <div
+                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-white rounded-md text-cs-black border">
+                                    <h1 class="my-auto">Lift & Eskalator</h1>
                                 </div>
                             </div>
+                            <!-- end tag -->
+                            <div class="my-auto">
+                                <h1 class="cs-font-caption text-cs-gray">17 Jun 2023</h1>
+                            </div>
                         </div>
+
+                        <!-- Title -->
+                        <div>
+                            <h1 class="cs-font-title text-cs-black">SPV Electric</h1>
+                        </div>
+                        <!-- end Title -->
                     </div>
                 </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
+                <!-- absolute -->
+                <div class="absolute w-full top-20">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-caret-down cursor-pointer px-2 py-1 bg-white text-xs rounded-full shadow"
+                            @click="open = !open"></i>
+                    </div>
                 </div>
-                <!--  -->
                 <!-- modal -->
-                <div class="px-4 relative" x-show="open">
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
-                    </div>
-                </div>
-                <!-- end modal -->
+                <div class="px-4" x-show="open" x-transition>
+                    <div class="border rounded-b-xl bg-slate-50 border-t-0 p-4 space-y-2">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Due Date</h1>
+                                <h1 class="cs-font-body text-cs-black">5 Jun 2023</h1>
+                            </div>
+                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
+                                <div class="flex">
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">w</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                    </div>
+                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                        <h1 class="cs-font-overline my-auto w-full text-center">+90</h1>
+                                    </div>
+                                </div>
+                            </div>
 
-            </div>
-            <!-- end card example -->
-
-            <!-- card example -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="www.google.com" class="" target="_blank">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
+                            <div class="bg-white col-span-2 px-2 py-3 rounded-lg space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Description</h1>
+                                <h1 class="cs-font-body text-cs-black line-clamp-3">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit. Sed sed dolor sit amet eros gravida aliquam. Vivamus sed varius
+                                    sapien, ac sagittis orci. In placerat justo ut tempus ornare.</h1>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="./workorder-list-detail.html">
+                                <h1
+                                    class="cs-font-buttonNormal py-2 px-4 border rounded-xl border-cs-primary text-cs-primary">
+                                    View Detail
                                 </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
-                                </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
                 </div>
-                <!--  -->
-                <!-- modal -->
-                <div class="px-4 relative" x-show="open">
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
-                    </div>
-                </div>
-                <!-- end modal -->
-
             </div>
-            <!-- end card example -->
+            <!-- end Card 1 -->
 
-            <!-- card example -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="www.google.com" class="" target="_blank">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
-                                </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
-                                </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
-                </div>
-                <!--  -->
-                <!-- modal -->
-                <div class="px-4 relative" x-show="open">
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
-                    </div>
-                </div>
-                <!-- end modal -->
 
-            </div>
-            <!-- end card example -->
 
-            <!-- card example -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="www.google.com" class="" target="_blank">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
-                                </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
-                                </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
-                </div>
-                <!--  -->
-                <!-- modal -->
-                <div class="px-4 relative" x-show="open">
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
-                    </div>
-                </div>
-                <!-- end modal -->
-
-            </div>
-            <!-- end card example -->
-
-            <!-- card example -->
-            <div x-data="{ open: false }" class="relative">
-                <a href="www.google.com" class="" target="_blank">
-                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-2">
-                        <div class="grid grid-cols-5 gap-3">
-                            <div class="col-span-4 space-y-2">
-                                <h1 class="cs-font-title truncate text-cs-black">SPV Electric SPV Electric SPV Electric
-                                    SPV Electric
-                                </h1>
-                            </div>
-                            <div class="col-span-1 cs-font-caption text-cs-gray whitespace-nowrap pt-1">
-                                <h1>09:12 PM</h1>
-                            </div>
-                        </div>
-                        <!-- button caption -->
-                        <div class="flex justify-between gap-3 z-10">
-                            <div class="flex space-x-2  mr-8">
-                                <div class="px-3 py-1 bg-cs-primary my-auto rounded-md">
-                                    <h1 class="cs-font-caption">Inspect</h1>
-                                </div>
-                                <div class="px-3 py-1 bg-blue-500 my-auto rounded-md">
-                                    <h1 class="cs-font-caption line-clamp-1">Lift & Eskalator</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!--  -->
-                <div class="absolute top-11 right-3">
-                    <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = true">
-                        <i class="fa-solid fa-caret-down text-cs-black"></i>
-                    </button>
-                </div>
-                <!--  -->
-                <!-- modal -->
-                <div class="px-4 relative" x-show="open">
-                    <!-- close button -->
-                    <div class="absolute right-3 -top-[2.875rem]">
-                        <button class="px-2.5 py-1 bg-slate-100 rounded-full transition-colors" @click="open = !open">
-                            <i class="fa-solid fa-caret-up text-cs-black"></i>
-                        </button>
-                    </div>
-                    <!-- end close button -->
-                    <div class="border-x border-b p-2 rounded-b-lg bg-slate-50">
-                        <h1>test</h1>
-                    </div>
-                </div>
-                <!-- end modal -->
-
-            </div>
-            <!-- end card example -->
 
         </section>
         <!-- end Card -->
