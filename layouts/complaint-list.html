@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40 backdrop-blur-md">
+        <div class="flex justify-between">
+            <div class="px-4 py-3">
+                <a href="./index.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="pt-14 container px-4 space-y-6 pb-36">
+
+
+        <!-- ========= tab ========= -->
+        <div>
+            <div class="relative">
+                <!-- Button Tab -->
+                <div class="fixed w-full left-0  backdrop-blur-md px-4 py-2">
+                    <ul class="relative flex list-none bg-slate-100 flex-wrap rounded-xl bg-blue-gray-50/60 p-1"
+                        data-tabs="tabs" role="list">
+                        <li class="z-30 flex-auto text-center">
+                            <a class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-xl border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                                data-tab-target="" active="" role="tab" aria-selected="true" aria-controls="app">
+                                <span class="ml-1 cs-font-buttonHover">My Complaint</span>
+                            </a>
+                        </li>
+                        <li class="z-30 flex-auto text-center">
+                            <a class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                                data-tab-target="" role="tab" aria-selected="false" aria-controls="message">
+                                <span class="ml-1">Unassigned</span>
+                            </a>
+                        </li>
+                        <li class="z-30 flex-auto text-center">
+                            <a class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                                data-tab-target="" role="tab" aria-selected="false" aria-controls="settings">
+                                <span class="ml-1">Assigned</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end Button Tab -->
+
+                <!-- Tab information -->
+                <div data-tab-content="" class="pt-20">
+                    <!-- my complaint tab -->
+                    <div class="block opacity-100" id="app" role="tabpanel">
+                        <!-- Card -->
+                        <section class="space-y-6">
+
+                            <!-- Card 1 -->
+                            <div class="relative" x-data="{ open: false }">
+                                <a href="./complaint-list-detail.html">
+                                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-3">
+
+                                        <div class="flex justify-between">
+                                            <!-- tag -->
+                                            <div class="flex gap-2 flex-wrap">
+                                                <!-- complete -->
+                                                <div
+                                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-slate-800 rounded-md text-white">
+                                                    <h1 class="my-auto">Accept</h1>
+                                                </div>
+                                                <!-- out of date -->
+                                                <div
+                                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-rose-500 rounded-md text-white border">
+                                                    <h1 class="my-auto">Complaint</h1>
+                                                </div>
+                                            </div>
+                                            <!-- end tag -->
+                                            <div class="my-auto text-right">
+                                                <h1 class="cs-font-caption text-cs-gray">17 Jun 2023</h1>
+                                                <h1 class="cs-font-caption text-cs-gray">09:22 PM</h1>
+                                            </div>
+                                        </div>
+
+                                        <!-- Title -->
+                                        <div>
+                                            <h1 class="cs-font-caption text-cs-gray">Suseno FX</h1>
+                                            <h1 class="cs-font-title text-cs-black line-clamp-1">Kulkas Rusak</h1>
+                                        </div>
+                                        <!-- end Title -->
+                                    </div>
+                                </a>
+                                <!-- absolute -->
+                                <div class="absolute w-full top-[5.5rem]">
+                                    <div class="flex justify-center">
+                                        <i class="fa-solid fa-caret-down cursor-pointer px-2 py-1 bg-white text-xs rounded-full shadow"
+                                            @click="open = !open"></i>
+                                    </div>
+                                </div>
+                                <!-- modal -->
+                                <div class="px-4" x-show="open" x-transition>
+                                    <div class="border rounded-b-xl bg-slate-50 border-t-0 p-4 space-y-2">
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Due Date</h1>
+                                                <h1 class="cs-font-body text-cs-black">5 Jun 2023</h1>
+                                            </div>
+                                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
+                                                <div class="flex">
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">w</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">+90</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white col-span-2 px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Description</h1>
+                                                <h1 class="cs-font-body text-cs-black line-clamp-3">Lorem ipsum dolor
+                                                    sit amet,
+                                                    consectetur
+                                                    adipiscing elit. Sed sed dolor sit amet eros gravida aliquam.
+                                                    Vivamus sed varius
+                                                    sapien, ac sagittis orci. In placerat justo ut tempus ornare.</h1>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-center">
+                                            <a href="./workorder-list-detail.html">
+                                                <h1
+                                                    class="cs-font-buttonNormal py-2 px-4 border rounded-xl border-cs-primary text-cs-primary">
+                                                    View Detail
+                                                </h1>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Card 1 -->
+
+                            <!-- Card 2 -->
+                            <div class="relative" x-data="{ open: false }">
+                                <a href="./complaint-list-detail.html">
+                                    <div class="bg-white w-full relative border p-4 rounded-xl space-y-3">
+
+                                        <div class="flex justify-between">
+                                            <!-- tag -->
+                                            <div class="flex gap-2 flex-wrap">
+                                                <!-- complete -->
+                                                <div
+                                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-green-500 rounded-md text-white">
+                                                    <h1 class="my-auto">Approved</h1>
+                                                </div>
+                                                <!-- out of date -->
+                                                <div
+                                                    class="cs-font-overline flex px-3 space-x-1 py-1 bg-cyan-500 rounded-md text-white border">
+                                                    <h1 class="my-auto line-clamp-1">Request</h1>
+                                                </div>
+                                            </div>
+                                            <!-- end tag -->
+                                            <div class="my-auto text-right">
+                                                <h1 class="cs-font-caption text-cs-gray">17 Jun 2023</h1>
+                                                <h1 class="cs-font-caption text-cs-gray">12:00 AM</h1>
+                                            </div>
+                                        </div>
+
+                                        <!-- Title -->
+                                        <div>
+                                            <h1 class="cs-font-caption text-cs-gray">Suseno FX</h1>
+                                            <h1 class="cs-font-title text-cs-black">Kursi untuk tenant</h1>
+                                        </div>
+                                        <!-- end Title -->
+                                    </div>
+                                </a>
+                                <!-- absolute -->
+                                <div class="absolute w-full top-[5.5rem]">
+                                    <div class="flex justify-center">
+                                        <i class="fa-solid fa-caret-down cursor-pointer px-2 py-1 bg-white text-xs rounded-full shadow"
+                                            @click="open = !open"></i>
+                                    </div>
+                                </div>
+                                <!-- modal -->
+                                <div class="px-4" x-show="open" x-transition>
+                                    <div class="border rounded-b-xl bg-slate-50 border-t-0 p-4 space-y-2">
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Due Date</h1>
+                                                <h1 class="cs-font-body text-cs-black">5 Jun 2023</h1>
+                                            </div>
+                                            <div class="bg-white px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
+                                                <div class="flex">
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">w</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">B</h1>
+                                                    </div>
+                                                    <div class="h-6 w-6 rounded-full flex bg-blue-200 ring-white ring">
+                                                        <h1 class="cs-font-overline my-auto w-full text-center">+90</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white col-span-2 px-2 py-3 rounded-lg space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Description</h1>
+                                                <h1 class="cs-font-body text-cs-black line-clamp-3">Lorem ipsum dolor
+                                                    sit amet,
+                                                    consectetur
+                                                    adipiscing elit. Sed sed dolor sit amet eros gravida aliquam.
+                                                    Vivamus sed varius
+                                                    sapien, ac sagittis orci. In placerat justo ut tempus ornare.</h1>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-center">
+                                            <a href="./workorder-list-detail.html">
+                                                <h1
+                                                    class="cs-font-buttonNormal py-2 px-4 border rounded-xl border-cs-primary text-cs-primary">
+                                                    View Detail
+                                                </h1>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Card 2 -->
+
+
+                        </section>
+                        <!-- end Card -->
+                    </div>
+                    <!-- end my complaint tab -->
+                    <!-- Unassigned tab -->
+                    <div class="hidden opacity-0" id="message" role="tabpanel">
+                        <p
+                            class="block font-sans text-base font-light leading-relaxed text-inherit text-blue-gray-500 antialiased">
+                            The reading of all good books is like a conversation with the finest
+                            minds of past centuries.
+                        </p>
+                    </div>
+                    <!-- end Unassigned tab -->
+                    <!-- Assigned tab -->
+                    <div class="hidden opacity-0" id="settings" role="tabpanel">
+                        <p
+                            class="block font-sans text-base font-light leading-relaxed text-inherit text-blue-gray-500 antialiased">
+                            Comparing yourself to others is the thief of joy.
+                        </p>
+                    </div>
+                    <!-- end Assigned tab -->
+                </div>
+                <!-- end Tab information -->
+            </div>
+        </div>
+        <!-- ========= end tab ========= -->
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+    <!-- ========= FAB Filter ========= -->
+    <div x-data="{ open: false }">
+        <button class="fixed bottom-5 w-screen" @click="open = true">
+            <div class="p-2 flex justify-center">
+                <div class="flex bg-white border border-cs-primary text-cs-primary py-1 px-4 rounded-xl space-x-2">
+                    <i class="fa-regular fa-filter-list my-auto"></i>
+                    <h1 class="my-auto font-body text-sm ">Filter</h1>
+                </div>
+            </div>
+        </button>
+        <!-- Modal -->
+        <div class="fixed h-screen w-screen bg-black/50 top-0 z-40" x-show="open" x-transition>
+
+            <!-- close button -->
+            <button class="absolute bottom-6  py-1 w-screen" @click="open = !open">
+                <div class="flex justify-center">
+                    <div class="flex bg-red-500 border border-red-800 text-white py-1 px-5 rounded-xl space-x-2">
+                        <i class="fa-regular fa-xmark my-auto"></i>
+                        <h1 class="my-auto font-body text-sm ">Close</h1>
+                    </div>
+                </div>
+            </button>
+            <!-- close button -->
+
+            <!-- Main popup -->
+            <div class="flex justify-center h-screen px-4">
+                <div class="my-auto bg-white relative drop-shadow-md rounded-xl p-4 w-full">
+
+
+                    <div class="py-2">
+                        <h1 class="text-center cs-font-title text-cs-black uppercase">Select Filter</h1>
+                    </div>
+
+                    <div class="pt-4 space-y-3 overflow-y-scroll h-96">
+                        <!-- Progress -->
+                        <div class="space-y-4 border p-4 rounded-xl">
+                            <!-- title -->
+                            <h1 class="cs-font-title text-cs-black">Progress</h1>
+                            <!-- Button -->
+                            <div class="space-y-2">
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div>
+                                        <a href="#">
+                                            <h1
+                                                class="cs-font-body p-2 border bg-cs-primary text-cs-black text-center rounded-xl">
+                                                All
+                                            </h1>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="#">
+                                            <h1 class="cs-font-body p-2 border text-center rounded-xl">Wait</h1>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="#">
+                                            <h1 class="cs-font-body p-2 border text-center rounded-xl">Process</h1>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <a href="#">
+                                            <h1 class="cs-font-body p-2 border text-center rounded-xl">Complete</h1>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="#">
+                                            <h1 class="cs-font-body p-2 border text-center rounded-xl">Inspect</h1>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Button -->
+                        </div>
+                        <!-- end Progress -->
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="border-t pt-4">
+                        <button class="flex justify-center w-full">
+                            <h1
+                                class="py-2 px-6 rounded-xl bg-white border border-cs-primary text-cs-primary font-body text-sm">
+                                Search Now</h1>
+                        </button>
+                    </div>
+                    <!-- end Footer -->
+
+                </div>
+            </div>
+            <!-- end Main popup -->
+
+        </div>
+        <!-- end Modal -->
+    </div>
+    <!-- ========= end FAB Filter ========= -->
+
+    <!-- ========= FAB ========= -->
+    <div x-data="{ open: false }">
+        <button class="fixed bottom-5 right-5 drop-shadow-md" @click="open = true">
+            <i class="fa-solid fa-plus p-4 bg-cs-primary text-cs-black rounded-full"></i>
+        </button>
+        <!-- Modal -->
+        <div class="fixed h-screen w-screen bg-black/50 top-0 z-40" x-show="open" x-transition>
+            <div class="flex justify-center h-screen px-4">
+                <div class="my-auto bg-white relative drop-shadow-md rounded-xl p-4 w-full">
+
+                    <!-- close button -->
+                    <button class="absolute -top-4 right-3" @click="open = !open">
+                        <i class="fa-solid fa-xmark px-2.5 py-0.5 bg-red-500 rounded-full text-lg text-white"></i>
+                    </button>
+                    <!-- close button -->
+
+                    <div class="py-2">
+                        <h1 class="text-center cs-font-title text-cs-black uppercase">Select the type of task</h1>
+                    </div>
+                    <div class="pt-4 space-y-3">
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Complaint & Request</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Work Order</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Loading & UnLoading</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">SIKA (Surat Izin Kerja)</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Tenant Meter</h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="border p-2 rounded-md">
+                                    <h1 class="cs-font-body text-cs-black text-center">Request Service</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Modal -->
+    </div>
+    <!-- ========= end FAB ========= -->
+
+</body>
+
+<!-- Material tailwind -->
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"></script>
+
+</html>
