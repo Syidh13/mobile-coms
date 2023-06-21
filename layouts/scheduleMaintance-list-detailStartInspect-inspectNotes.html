@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <div class="flex justify-between">
+            <div class="px-4 py-3">
+                <a href="./scheduleMaintance-list-detailStartInspect.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="container pb-24 pt-16">
+
+        <!-- Progress Status -->
+        <section class="px-4">
+
+            <div class="border rounded-xl p-3">
+                <div class="grid grid-cols-2 divide-x">
+                    <div class="col-span-1 flex">
+                        <div class="mx-auto my-auto space-y-2">
+                            <div class="h-2 w-2 rounded-full mx-auto bg-red-500 ring-4 ring-red-300"></div>
+                            <h1 class="text-center cs-font-caption text-cs-gray">Inspect Notes</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 flex">
+                        <div class="mx-auto my-auto space-y-2">
+                            <div class="h-2 w-2 rounded-full mx-auto bg-slate-400 ring-4 ring-slate-200"></div>
+                            <h1 class="text-center cs-font-caption text-cs-gray">Inspect Rating</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <!-- end Progress Status -->
+
+        <section class="px-4 pt-3 space-y-4">
+
+            <section class="space-y-6">
+                <div class="space-y-2">
+                    <div>
+                        <h1 class="cs-font-title text-cs-black uppercase">Photo</h1>
+                        <h1 class="cs-font-caption text-cs-gray">Tap to take the picture (Max photo.5)</h1>
+                    </div>
+                    <div>
+                        <a href="#" class="flex">
+                            <div class="p-6 rounded-lg border-dashed border-2">
+                                <i class="fa-duotone fa-image text-2xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <h1 class="cs-font-caption text-cs-gray">Notes</h1>
+                    <textarea class="border w-full cs-font-body p-2 rounded-lg" id="#" name="#" rows="3"
+                        placeholder="Input your note in here">
+                        </textarea>
+                </div>
+            </section>
+
+
+
+        </section>
+
+        <!-- Footer -->
+        <section class="fixed bottom-4 w-full px-4">
+            <div class="bg-white shadow rounded-2xl p-3 border">
+                <div class="grid gap-3">
+                    <a href="./scheduleMaintance-list-detailStartInspect-inspectRating.html"
+                        class="p-2 rounded-lg bg-cs-primary">
+                        <h1 class="cs-font-buttonHover text-center text-white ">Continue</h1>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End Footer -->
+
+
+
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+
+
+</body>
+
+</html>
