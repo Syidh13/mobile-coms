@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <div class="flex justify-between">
+            <div class="px-4 py-3">
+                <a href="./scheduleMaintance-list.html">
+                    <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="container pb-24 pt-14">
+
+        <section class="px-4 pt-3 space-y-4">
+
+            <!-- Title -->
+            <section class="space-y-1">
+                <!--  -->
+                <h1 class="cs-font-caption my-auto text-cs-gray">11 May 2023, 09:00 AM</h1>
+                <!-- title -->
+                <div>
+                    <h1 class="cs-font-headline2 tracking-tight text-cs-black">PM Electric</h1>
+                </div>
+                <h1 class="cs-font-caption my-auto text-cs-gray">FXS/PM/VI/2023/0001</h1>
+                <!-- end title -->
+            </section>
+            <!-- end Title -->
+
+            <!-- test -->
+            <section class="grid grid-cols-5 gap-3">
+                <!-- due date -->
+                <section class="border p-4 col-span-3 rounded-xl">
+                    <div class="space-y-2">
+                        <div class="flex space-x-1">
+                            <i class="fa-regular fa-calendar text-xs my-auto text-cs-gray"></i>
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Due Date</h1>
+                        </div>
+                        <div class="flex space-x-1">
+                            <h1 class="cs-font-body my-auto">12 May 2023</h1>
+                            <span class="my-auto text-cs-gray cs-font-body">|</span>
+                            <h1 class="cs-font-body my-auto">14:30 PM</h1>
+                        </div>
+                    </div>
+                </section>
+                <!-- end due date -->
+
+                <!-- Assigness -->
+                <section x-data="{ open: false }" class="col-span-2">
+                    <div class="p-4 border rounded-xl space-y-2 cursor-pointer" @click="open = true">
+                        <div class="flex space-x-1">
+                            <i class="fa-regular fa-user text-cs-gray text-xs my-auto"></i>
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Assigned </h1>
+                        </div>
+                        <div class="flex justify-between">
+                            <h1 class="cs-font-body my-auto">999 Staff</h1>
+                            <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div x-show="open" x-transition class="bg-black/40 h-screen fixed w-screen top-0 left-0 z-50">
+                        <div class="flex justify-center h-screen p-4">
+                            <div class="my-auto w-full">
+                                <div class="bg-white rounded-xl p-4">
+                                    <!-- header -->
+                                    <div class="flex justify-between border-b pb-4">
+                                        <h1 class="cs-font-title my-auto">Staff Assigned <span
+                                                class="cs-font-caption text-cs-gray">(2
+                                                Staff)</span></h1>
+                                        <i class="fa-regular fa-xmark my-auto px-2 cursor-pointer rounded-full py-1.5 bg-slate-100"
+                                            @click="open = !open"></i>
+                                    </div>
+                                    <!-- end header -->
+                                    <div class=" overflow-y-auto max-h-96">
+                                        <ul class="cs-font-body py-3 divide-y">
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                            <li class="py-3">Tarminli</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end modal -->
+                </section>
+                <!-- end Assigness -->
+
+                </div>
+            </section>
+            <!-- test -->
+
+            <!-- Progress Status -->
+            <section>
+                <a href="./scheduleMaintance-list-detail-progressMeter.html">
+                    <div class="cursor-pointer border rounded-xl p-4">
+                        <div class="space-y-1">
+                            <h1 class="cs-font-caption text-cs-gray">Progress Meter</h1>
+                            <div class="flex justify-between">
+                                <h1 class="cs-font-subtitle text-purple-500 my-auto">Unassign</h1>
+                                <i class="fa-regular fa-angle-right my-auto px-2 py-1 rounded-full bg-slate-100"></i>
+                            </div>
+                        </div>
+                </a>
+                </div>
+            </section>
+            <!-- end Progress Status -->
+
+            <!-- Description -->
+            <section class="bg-white border border-slate-200 rounded-xl p-4 space-y-2">
+                <h1 class="cs-font-title my-auto">Description</h1>
+                <div>
+                    <h1 class="font-body text-sm leading-relaxed text-cs-gray">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit. Nunc a semper
+                        augue. Quisque eleifend facilisis ligula nec facilisis. Morbi iaculis ipsum eget rhoncus
+                        pulvinar. Suspendisse eget magna odio. Cras commodo, arcu sit amet venenatis blandit, velit arcu
+                        interdum nulla, in vehicula est libero lacinia massa. Aenean id sapien ac risus consequat
+                        convallis eu sed eros. Integer elementum neque tincidunt ligula malesuada, vel tempus est
+                        blandit.
+                    </h1>
+                </div>
+
+            </section>
+            <!-- end Description -->
+
+            <!-- Category -->
+            <section class="bg-slate-50 rounded-xl p-4 space-y-4">
+                <!-- Category type -->
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray my-auto">Category type</h1>
+                    <h1 class="font-body text-sm">Listrik</h1>
+                </div>
+            </section>
+            <!-- end Category -->
+
+            <!-- Location -->
+            <section class="bg-slate-50 rounded-xl p-4 space-y-4">
+                <div>
+                    <h1 class="cs-font-overline text-cs-gray">Location</h1>
+                    <h1 class="font-body text-sm">Floor F1</h1>
+                </div>
+            </section>
+            <!-- end Location -->
+        </section>
+
+
+        <!-- Footer -->
+        <section class="fixed bottom-4 w-full px-4" x-data="{ open: false }">
+            <div class="bg-white shadow rounded-2xl p-3 border">
+                <div class="grid">
+                    <button class="p-2 rounded-lg bg-cs-primary" @click="open = true">
+                        <h1 class="cs-font-buttonHover text-center text-white">Edit</h1>
+                    </button>
+                </div>
+            </div>
+            <!-- modal -->
+            <div class="fixed backdrop-blur top-0 left-0 h-screen w-screen" x-show="open" x-transition>
+                <div class="flex justify-center h-screen w-screen">
+                    <div class="my-auto w-full px-10">
+                        <div class="p-4 rounded-xl drop-shadow-md bg-white w-full space-y-4">
+                            <!-- Assign to -->
+                            <div class="space-y-2">
+                                <h1 class="cs-font-caption text-cs-gray">Assign to</h1>
+                                <button class="px-3 py-1.5 border rounded-lg w-full flex justify-between">
+                                    <h1 class="cs-font-body my-auto">5 Staff</h1>
+                                    <i class="fa-solid fa-caret-right my-auto"></i>
+                                </button>
+                                <div class="flex gap-1 flex-wrap">
+                                    <div class="py-1 px-2 bg-blue-500 rounded-md">
+                                        <h1 class="cs-font-caption text-white">Heri</h1>
+                                    </div>
+                                    <div class="py-1 px-2 bg-blue-500 rounded-md">
+                                        <h1 class="cs-font-caption text-white">Doni</h1>
+                                    </div>
+                                    <div class="py-1 px-2 bg-blue-500 rounded-md">
+                                        <h1 class="cs-font-caption text-white">Himawari</h1>
+                                    </div>
+                                    <div class="py-1 px-2 bg-blue-500 rounded-md">
+                                        <h1 class="cs-font-caption text-white">Cupapi Munyenyo</h1>
+                                    </div>
+                                    <div class="py-1 px-2 bg-blue-500 rounded-md">
+                                        <h1 class="cs-font-caption text-white">Suwawa wiwa</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Due date -->
+                            <div class="space-y-2">
+                                <h1 class="cs-font-caption text-cs-gray">Due date</h1>
+                                <button class="px-3 py-1.5 border rounded-lg w-full flex justify-between">
+                                    <h1 class="cs-font-body my-auto">2023 - 06 - 08</h1>
+                                    <i class="fa-solid fa-caret-right my-auto"></i>
+                                </button>
+                            </div>
+
+                            <!-- button -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="p-2 bg-white rounded-xl" @click="open = !open">
+                                    <h1 class="cs-font-body text-center text-cs-gray">Cancel</h1>
+                                </button>
+                                <a href="#">
+                                    <div class="p-2 bg-cs-primary rounded-xl">
+                                        <h1 class="cs-font-body text-cs-black text-center">Assign Now</h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Footer -->
+
+
+
+
+    </section>
+    <!-- ========= end Main ========= -->
+
+
+
+</body>
+
+</html>
