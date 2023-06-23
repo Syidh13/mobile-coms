@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ========= Header ========= -->
+    <section class="fixed w-full z-40">
+        <div class="px-4 py-3">
+            <a href="./index.html">
+                <i class="fa-solid fa-angle-left px-3 rounded-full text-cs-black bg-white drop-shadow-md py-2"></i>
+            </a>
+        </div>
+    </section>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="pt-16 container px-4 space-y-6 pb-36">
+        <!-- title -->
+        <div>
+            <h1 class="cs-font-headline2 tracking-tight text-cs-black">Create Work Order</h1>
+        </div>
+        <!-- end title -->
+
+        <!-- Category -->
+        <section class="border p-4 col-span-3 space-y-4 rounded-lg">
+            <h1 class="cs-font-title uppercase">Category</h1>
+            <!-- add Title -->
+            <div class="space-y-2">
+                <h1 class="cs-font-overline text-cs-gray my-auto">Select Category</h1>
+                <div class="flex justify-between border rounded-xl p-2 cursor-pointer">
+                    <h1 class="cs-font-body text-cs-gray">Select Category</h1>
+                    <i class="fa-solid fa-caret-down my-auto text-cs-gray"></i>
+                </div>
+            </div>
+        </section>
+        <!-- end Category -->
+
+        <!-- Task Detail -->
+        <section class="border p-4 col-span-3 space-y-4 rounded-xl">
+
+            <h1 class="cs-font-title uppercase">Task Detail</h1>
+
+            <!-- add Title -->
+            <div class="space-y-2">
+                <h1 class="cs-font-overline text-cs-gray my-auto">Add Title</h1>
+                <input type="text" name="" id="" class="w-full border rounded-lg p-2 cs-font-body">
+            </div>
+
+            <!-- add note -->
+            <div class="space-y-2">
+                <h1 class="cs-font-overline text-cs-gray my-auto">Add Description</h1>
+                <textarea name="" id="" class="w-full border rounded-lg p-2 cs-font-body" rows="2"></textarea>
+            </div>
+            <!-- end Add note -->
+
+            <div class="grid grid-cols-2 gap-3">
+                <!-- assign to -->
+                <div x-data="{ open: false }">
+                    <div class="space-y-2">
+                        <h1 class="cs-font-overline text-cs-gray my-auto">Assign to</h1>
+                        <div class="flex justify-between border p-2 rounded-lg" @click="open = true">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">0 Staff</h1>
+                            <div> <i class="fa-solid fa-caret-down my-auto text-cs-gray"></i></div>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div x-show="open" x-transition
+                        class="fixed z-40 py-20 w-screen h-screen backdrop-blur top-0 left-0">
+                        <div class=" flex justify-center h-full px-8">
+                            <div
+                                class="my-auto p-4 space-y-2 w-full h-full bg-white pb-36 rounded-xl shadow-md relative">
+                                <!-- close button -->
+                                <button class="absolute -right-3 -top-3" @click="open = !open">
+                                    <i class="fa-regular fa-xmark px-2.5 py-1.5 rounded-full bg-red-500 text-white"></i>
+                                </button>
+                                <h1 class="cs-font-title">Select Staff</h1>
+                                <!-- search -->
+                                <form>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                            <i class="fa-regular fa-magnifying-glass text-cs-gray"></i>
+                                        </div>
+                                        <input type="search" id="default-search"
+                                            class="block w-full p-2 pl-10 cs-font-body text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
+                                            placeholder="Search Staff" required>
+                                    </div>
+                                </form>
+                                <!-- end search -->
+
+                                <!-- staff list -->
+                                <div class="border w-full h-full rounded-lg divide-y overflow-y-auto">
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+                                    <div class="p-4">
+                                        <h1 class="cs-font-body">Syidh Al Rasyid</h1>
+                                    </div>
+
+                                </div>
+                                <!-- end staff list -->
+
+                                <!-- button submit -->
+                                <div class="flex justify-end">
+                                    <button class="cs-font-buttonHover p-2 bg-cs-primary rounded-md">
+                                        <h class="text-cs-black">Submit</h>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end assign to -->
+                <!-- Due date -->
+                <div>
+                    <div class="space-y-2">
+                        <h1 class="cs-font-overline text-cs-gray my-auto">Due date</h1>
+                        <div class="flex justify-between border p-2 rounded-lg" @click="open = true">
+                            <h1 class="cs-font-overline text-cs-gray my-auto">Set date</h1>
+                            <div> <i class="fa-solid fa-caret-down my-auto text-cs-gray"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end Due date -->
+            </div>
+
+        </section>
+        <!-- end Task Detail -->
+
+        <!-- Location -->
+        <section class="border p-4 col-span-3 space-y-4 rounded-xl">
+
+            <h1 class="cs-font-title uppercase">Location</h1>
+
+            <!-- Floor -->
+            <div x-data="{ open: false }">
+                <div class="space-y-2">
+                    <h1 class="cs-font-overline text-cs-gray my-auto">Floor</h1>
+                    <div class="flex justify-between border p-2 rounded-lg" @click="open = true">
+                        <h1 class="cs-font-overline text-cs-gray my-auto">Select floor</h1>
+                        <div> <i class="fa-solid fa-caret-down my-auto text-cs-gray"></i></div>
+                    </div>
+                </div>
+                <!-- modal -->
+                <div x-show="open" x-transition class="fixed z-40 py-20 w-screen h-screen backdrop-blur top-0 left-0">
+                    <div class=" flex justify-center h-full px-8">
+                        <div class="my-auto p-4 space-y-2 w-full h-full bg-white pb-36 rounded-xl shadow-md relative">
+                            <!-- close button -->
+                            <button class="absolute -right-3 -top-3" @click="open = !open">
+                                <i class="fa-regular fa-xmark px-2.5 py-1.5 rounded-full bg-red-500 text-white"></i>
+                            </button>
+                            <h1 class="cs-font-title">Select Floor</h1>
+                            <!-- search -->
+                            <form>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <i class="fa-regular fa-magnifying-glass text-cs-gray"></i>
+                                    </div>
+                                    <input type="search" id="default-search"
+                                        class="block w-full p-2 pl-10 cs-font-body text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
+                                        placeholder="Search Floor" required>
+                                </div>
+                            </form>
+                            <!-- end search -->
+
+                            <!-- floor list -->
+                            <div class="border w-full h-full rounded-lg divide-y overflow-y-auto">
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1F</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+                                <div class="p-4">
+                                    <h1 class="cs-font-body">1G</h1>
+                                </div>
+
+                            </div>
+                            <!-- end floor list -->
+
+                            <!-- button submit -->
+                            <div class="flex justify-end">
+                                <button class="cs-font-buttonHover p-2 bg-cs-primary rounded-md">
+                                    <h class="text-cs-black">Submit</h>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end Floor -->
+
+            <!-- Location detail -->
+            <div class="space-y-2">
+                <h1 class="cs-font-overline text-cs-gray my-auto">Location detail</h1>
+                <textarea name="" id="" class="w-full border rounded-lg p-2 cs-font-body" rows="2"></textarea>
+            </div>
+            <!-- end Location detail -->
+
+        </section>
+        <!-- end Location -->
+
+        <!-- Location -->
+        <section class="border p-4 col-span-3 space-y-4 rounded-xl">
+
+            <h1 class="cs-font-title uppercase">Location</h1>
+
+            <section class="col-span-3 space-y-6">
+                <!-- add photo -->
+                <div class="space-y-2">
+                    <h1 class="cs-font-overline text-cs-gray my-auto">Add photo (max.5 photos)</h1>
+                    <div class="grid grid-cols-5 gap-2">
+                        <button class="py-4 border-dashed rounded-md border">
+                            <i class="fa-duotone fa-image"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- end add photo -->
+
+                <!-- add photo (When it's filled) -->
+                <div class="space-y-2" x-data="{ open: false }">
+                    <h1 class="cs-font-overline text-cs-gray my-auto">Add photo (max.5 photos)</h1>
+                    <div class="grid grid-cols-3 gap-2">
+
+                        <!-- photos 1 -->
+                        <div>
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/16262297/pexels-photo-16262297/free-photo-of-ice-creams-cart.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+                                    alt="" class="aspect-square w-full object-cover rounded-md">
+                                <!-- absolute close button -->
+                                <div class="absolute top-0 h-full w-full">
+                                    <div class="flex justify-center h-full">
+                                        <button class="my-auto bg-red-500 py-1 px-2.5 rounded-full"
+                                            @click="open = true">
+                                            <i class="fa-regular fa-xmark text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- end absolute close button -->
+                            </div>
+                            <!-- modal -->
+                            <div x-show="open" x-transition
+                                class="backdrop-blur w-screen h-screen top-0 left-0 fixed z-40">
+                                <div class="flex justify-center my-auto h-screen">
+                                    <div class="bg-white my-auto border p-4 rounded-xl space-y-4">
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-title">Delete Photo</h1>
+                                            <h1 class="cs-font-body text-cs-gray">Are you sure you want to delete this
+                                                photo?</h1>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <!-- Yes Button -->
+                                            <button class="p-2 cs-font-buttonHover rounded-xl text-cs-gray">Yes</button>
+                                            <!-- end Yes Button -->
+
+                                            <!-- No Button -->
+                                            <button
+                                                class="p-2 cs-font-buttonHover rounded-xl bg-cs-primary text-cs-black"
+                                                @click="open = !open">No</button>
+                                            <!-- end No Button -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal -->
+                        </div>
+                        <!-- end photos 1 -->
+
+                        <!-- photos 2 -->
+                        <div>
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/5505846/pexels-photo-5505846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="" class="aspect-square w-full object-cover rounded-md">
+                                <!-- absolute close button -->
+                                <div class="absolute top-0 h-full w-full">
+                                    <div class="flex justify-center h-full">
+                                        <button class="my-auto bg-red-500 py-1 px-2.5 rounded-full"
+                                            @click="open = true">
+                                            <i class="fa-regular fa-xmark text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- end absolute close button -->
+                            </div>
+                            <!-- modal -->
+                            <div x-show="open" x-transition
+                                class="backdrop-blur w-screen h-screen top-0 left-0 fixed z-40">
+                                <div class="flex justify-center my-auto h-screen">
+                                    <div class="bg-white my-auto border p-4 rounded-xl space-y-4">
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-title">Delete Photo</h1>
+                                            <h1 class="cs-font-body text-cs-gray">Are you sure you want to delete this
+                                                photo?</h1>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <!-- Yes Button -->
+                                            <button class="p-2 cs-font-buttonHover rounded-xl text-cs-gray">Yes</button>
+                                            <!-- end Yes Button -->
+
+                                            <!-- No Button -->
+                                            <button
+                                                class="p-2 cs-font-buttonHover rounded-xl bg-cs-primary text-cs-black"
+                                                @click="open = !open">No</button>
+                                            <!-- end No Button -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal -->
+                        </div>
+                        <!-- end photos 2 -->
+
+                        <!-- photos 3 -->
+                        <div>
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/15264729/pexels-photo-15264729/free-photo-of-vintage-analog-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="" class="aspect-square w-full object-cover rounded-md">
+                                <!-- absolute close button -->
+                                <div class="absolute top-0 h-full w-full">
+                                    <div class="flex justify-center h-full">
+                                        <button class="my-auto bg-red-500 py-1 px-2.5 rounded-full"
+                                            @click="open = true">
+                                            <i class="fa-regular fa-xmark text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- end absolute close button -->
+                            </div>
+                            <!-- modal -->
+                            <div x-show="open" x-transition
+                                class="backdrop-blur w-screen h-screen top-0 left-0 fixed z-40">
+                                <div class="flex justify-center my-auto h-screen">
+                                    <div class="bg-white my-auto border p-4 rounded-xl space-y-4">
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-title">Delete Photo</h1>
+                                            <h1 class="cs-font-body text-cs-gray">Are you sure you want to delete this
+                                                photo?</h1>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <!-- Yes Button -->
+                                            <button class="p-2 cs-font-buttonHover rounded-xl text-cs-gray">Yes</button>
+                                            <!-- end Yes Button -->
+
+                                            <!-- No Button -->
+                                            <button
+                                                class="p-2 cs-font-buttonHover rounded-xl bg-cs-primary text-cs-black"
+                                                @click="open = !open">No</button>
+                                            <!-- end No Button -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal -->
+                        </div>
+                        <!-- end photos 3 -->
+
+                        <!-- photos 4 -->
+                        <div>
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/12730154/pexels-photo-12730154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="" class="aspect-square w-full object-cover rounded-md">
+                                <!-- absolute close button -->
+                                <div class="absolute top-0 h-full w-full">
+                                    <div class="flex justify-center h-full">
+                                        <button class="my-auto bg-red-500 py-1 px-2.5 rounded-full"
+                                            @click="open = true">
+                                            <i class="fa-regular fa-xmark text-white"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- end absolute close button -->
+                            </div>
+                            <!-- modal -->
+                            <div x-show="open" x-transition
+                                class="backdrop-blur w-screen h-screen top-0 left-0 fixed z-40">
+                                <div class="flex justify-center my-auto h-screen">
+                                    <div class="bg-white my-auto border p-4 rounded-xl space-y-4">
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-title">Delete Photo</h1>
+                                            <h1 class="cs-font-body text-cs-gray">Are you sure you want to delete this
+                                                photo?</h1>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <!-- Yes Button -->
+                                            <button class="p-2 cs-font-buttonHover rounded-xl text-cs-gray">Yes</button>
+                                            <!-- end Yes Button -->
+
+                                            <!-- No Button -->
+                                            <button
+                                                class="p-2 cs-font-buttonHover rounded-xl bg-cs-primary text-cs-black"
+                                                @click="open = !open">No</button>
+                                            <!-- end No Button -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal -->
+                        </div>
+                        <!-- end photos 4 -->
+
+                        <!-- photo dot -->
+                        <button class="py-4 border-dashed rounded-md border">
+                            <i class="fa-duotone fa-image"></i>
+                        </button>
+                        <!-- end photo dot -->
+
+                    </div>
+
+                    <button class="w-full p-2 bg-cs-primary flex justify-center space-x-3 rounded-md">
+                        <i class="fa-regular fa-camera my-auto"></i>
+                        <h1 class="cs-font-buttonHover text-cs-black">Add photo</h1>
+                    </button>
+                </div>
+                <!-- end add photo (When it's filled) -->
+            </section>
+            <!-- end Location -->
+
+
+        </section>
+        <!-- ========= end Main ========= -->
+
+
+        <!-- ========= FAB ========= -->
+        <div>
+            <a href="#">
+                <button class="fixed bottom-5 right-5 drop-shadow-md">
+                    <div class=" p-4 bg-cs-primary text-cs-black rounded-full flex space-x-3">
+                        <i class="fa-solid fa-plus my-auto"></i>
+                        <h1 class="my-auto cs-font-buttonHover">Create Task</h1>
+                    </div>
+                </button>
+            </a>
+        </div>
+        <!-- ========= end FAB ========= -->
+
+</body>
+
+</html>
